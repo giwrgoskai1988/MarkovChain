@@ -1,0 +1,14 @@
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\bin\Debug\MarkovChains.exe.config
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\bin\Debug\MarkovChains.exe
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\bin\Debug\MarkovChains.pdb
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\obj\Debug\MarkovChains.csprojAssemblyReference.cache
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\obj\Debug\MarkovChains.csproj.CoreCompileInputs.cache
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\obj\Debug\MarkovChains.exe
+C:\Users\Α\source\repos\MarkovChains\MarkovChains\obj\Debug\MarkovChains.pdb
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\bin\Debug\MarkovChains.exe.config
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\bin\Debug\MarkovChains.exe
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\bin\Debug\MarkovChains.pdb
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\obj\Debug\MarkovChains.csprojAssemblyReference.cache
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\obj\Debug\MarkovChains.csproj.CoreCompileInputs.cache
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\obj\Debug\MarkovChains.exe
+C:\Users\Α\source\repos\MyGit\MarkovChain\MarkovChains\obj\Debug\MarkovChains.pdb
