@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
+using System.Linq;
 
 namespace MarkovChains
 {
@@ -19,7 +21,7 @@ namespace MarkovChains
         {
             Console.WriteLine("Please enter a proper folder path to train me or press Enter to quit: ");
 
-            PathInput =  @"C:\Users\Α\source\repos"; ;
+            PathInput = @"C:\Users\Α\source\repos"; ;
 
             while (PathInput != "")
             {
@@ -70,6 +72,29 @@ namespace MarkovChains
                 }
                 sr.Close();
             }
+        }
+
+
+        public void RandomText()
+        {
+            StringBuilder sb = new StringBuilder();
+            StringBuilder sb2 = new StringBuilder();
+            ConsoleKeyInfo input;
+        
+            while (((input = Console.ReadKey()).KeyChar) != ' ')
+            {
+                sb.Append(input.KeyChar);          
+            }
+
+
+            for (int i = 0; i < 50; i++)
+            {
+                var b = wordPairs[sb.ToString().ToLower()].GroupBy(str => str);
+            }
+
+
+            //ConsoleKeyInfo input = Console.ReadKey();
+            //Console.WriteLine((int)input.KeyChar);
         }
 
     }
