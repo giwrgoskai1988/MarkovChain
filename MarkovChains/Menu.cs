@@ -8,6 +8,7 @@ namespace MarkovChains
 {
     class Menu
     {
+        bool GotTrained = false;
         public Dictionary<string , List<string>> wordPairs = new Dictionary<string, List<string>>();
         public string PathInput { get; private set; }
 
@@ -21,20 +22,20 @@ namespace MarkovChains
         {
             Console.WriteLine("Please enter a proper folder path to train me or press Enter to quit: ");
 
-            PathInput = @"C:\Users\Α\source\repos"; ;
+            PathInput = @"C:\Users\Α\source\repos\MyGit\MarkovChain\";
 
-            while (PathInput != "")
-            {
+            while (PathInput == "" || !GotTrained)
+            { 
                 if (PathExists())
                 {
                     Train();
+                    GotTrained = true;
                 }
                 else
                 {
                     Console.WriteLine("Path is wrong! Enter proper path or press Enter to quit! : ");
-                }
-
-                PathInput = Console.ReadLine();
+                    PathInput = Console.ReadLine();
+                }           
 
             }
         }
@@ -77,20 +78,37 @@ namespace MarkovChains
 
         public void RandomText()
         {
+            Random rnd = new Random();
+            Console.WriteLine("Enter text and press space to get a random word! Or press Escape anytime to quit!");
             StringBuilder sb = new StringBuilder();
-            StringBuilder sb2 = new StringBuilder();
             ConsoleKeyInfo input;
+            bool flag = true;
+            while(flag)
+            { 
+                while((input = Console.ReadKey()).KeyChar !=' ')
+                {
+                    if(input.KeyChar == 27)
+                    {
+                        flag = false;
+                        break;
+                    }
+                    sb.Append(input.KeyChar);
+                }
+
+                if(wordPairs.ContainsKey(sb.ToString().ToLower()))
+                {
+                    string output = "";
+                    output = wordPairs[sb.ToString().ToLower()][rnd.Next(wordPairs[sb.ToString().ToLower()].Count)];
+                    Console.Write(output + " ");
+                    
+                }
+                sb.Clear();
+
+            }
         
-            while (((input = Console.ReadKey()).KeyChar) != ' ')
-            {
-                sb.Append(input.KeyChar);          
-            }
+           
 
-
-            for (int i = 0; i < 50; i++)
-            {
-                var b = wordPairs[sb.ToString().ToLower()].GroupBy(str => str);
-            }
+     
 
 
             //ConsoleKeyInfo input = Console.ReadKey();
